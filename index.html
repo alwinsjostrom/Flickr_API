@@ -1,0 +1,80 @@
+<!-- Flickr API web-app -->
+<!DOCTYPE html>
+<html lang="sv">
+
+<!-- Presets for the browser -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="shortcut icon" href="../Images/flickr-1.svg" type="image/x-icon">
+    <title>Flickr images</title>
+</head>
+
+<!-- Markup for the web-app-->
+<body>
+    <!-- Header container with Flickr logo -->
+    <header id="header">
+        <figure><img class="header__logo" src="../Images/flickr-1.svg" alt="Flickr logo"></figure>
+        <h1 class="header__text"><a href="./index.html">flickr</a><span class="header__text--dark"> image search</span>
+        </h1>
+    </header>
+
+    <!-- Main container with nav & images -->
+    <main>
+        <!-- Navigation and search-bar -->
+        <section class="main__section__nav">
+            <nav class="main__section__nav--search">
+                <input id="search__input" type="text" placeholder="&#128269; Photos, people, or groups">
+                <button id="search__btn" class="search__btn">SEARCH</button>
+                <button id="search__previous" onclick="previousPage()">PREVIOUS PAGE</button>
+                <button id="search__next" onclick="nextPage()">NEXT PAGE</button>
+                <button id="search__settings" onclick="showSettings()">MORE</button>
+            </nav>
+            <section id="settings__menu" class="main__section__nav--settings hide">
+                <nav class="main__section__nav--btns">
+                    <p>Sort by:</p>
+                    <button>RELEVANT</button>
+                    <button>HOT</button>
+                    <button>NEW</button>
+                </nav>
+                <nav class="main__section__nav--btns">
+                    <p>Per page:</p>
+                    <button>20</button>
+                    <button>50</button>
+                    <button>75</button>
+                </nav>
+            </section>
+            <section id="search__info" class="main__section__nav--info hide">
+                <p id="info__page"></p>
+                <p id="info__pages"></p>
+                <p id="info__results"></p>
+            </section>
+        </section>
+
+        <!-- Large view of images -->
+        <section class="main__section__large">
+            <figure class="main__section__large__image" id="large__image"></figure>
+            <button id="clear__page" class="hide" onclick="clearPage()">CLOSE IMAGE</button>
+        </section>
+
+        <!-- Image-gallery with thumbnails -->
+        <section class="main__section__images">
+            <ul class="main__section__images--list" id="image__list"></ul>
+        </section>
+
+        <nav>
+            <button id="topBtn" class="top__btn hide" onclick="scrollToTop()">&#8679;</button>
+        </nav>
+    </main>
+
+    <!-- Footer container with copyright symbol -->
+    <footer>
+        <p class="copyright">&copy; Flickr</p>
+    </footer>
+
+    <!-- Script for the web-app -->
+    <script src="../script/index.js"></script>
+</body>
+
+</html>
