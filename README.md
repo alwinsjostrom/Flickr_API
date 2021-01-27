@@ -1,2 +1,2 @@
-# Flickr_API
-Projektarbete Javascript 1
+Projektarbete 2, Javascript 1.
+Flickr API
